@@ -1,5 +1,3 @@
-## run npm install 
-to download dependencies
+### run npm install to download dependencies
 
-## run npm start
-to watch the project in development mood
+## run npm start to watch the project in development mood
