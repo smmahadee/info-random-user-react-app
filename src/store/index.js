@@ -1,22 +1,10 @@
-import { createSlice , configureStore} from "@reduxjs/toolkit";
-
-
-const userInfoSlice = createSlice({
-    name : 'userInfo',
-    initialState: [],
-    reducers: {
-        saveUserData(state, action){
-           state =  [...JSON.parse(action.payload)];
-        }
-    }
-
-})
+import { configureStore } from '@reduxjs/toolkit';
+import userInfoReducer from '../reducers/userInfoSlice';
 
 const store = configureStore({
-    reducer: {
-        userInfoSlice: userInfoSlice.reducer
-    }
-})
+  reducer: {
+    getUserData: userInfoReducer,
+  },
+});
 
 export default store;
-export const userInfoAction = userInfoSlice.actions;
